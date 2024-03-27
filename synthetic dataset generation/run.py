@@ -1,6 +1,8 @@
 import json, os
 import numpy as np
 import progressbar
+import pandas as pd
+
 
 from lib import get_random_field, build_kernel_from_config
 
@@ -35,9 +37,9 @@ def run(config, output_path):
         # save each field
         for i in range(fields.shape[1]):
             f = fields[:,i].reshape(grid)
-            filename = 'field_%d_%s.dat' % (i + 1, '_'.join([str(_) for _ in values]))
-            np.savetxt(os.path.join(output_path, filename), f)        
-    
+            filename = 'field_%d_%s.csv' % (i + 1, '_'.join([str(_) for _ in values]))
+            f_df = pd.DataFrame(f)
+            f_df.to_csv(os.path.join(output_path, filename), index=False)
 
 if __name__=='__main__':
     import sys
