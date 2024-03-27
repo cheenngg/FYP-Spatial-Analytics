@@ -45,7 +45,7 @@ y_target = y_target_grid(:);
 
 % %Predict validation set (for performance analysis, if your validation set does not match with the grid)
 % % x and y here could be a column vector
-% [pmf_pred_nn, target_idx_zero_neigh_pred] = f_her_predict(x_cal, y_cal,z_cal, x, y, her);
+[pmf_pred_nn, target_idx_zero_neigh_pred] = f_her_predict(x_cal, y_cal,z_cal, x, y, her);
 
 %% Extract PMF statistics
 % extract mean, median, mode, probability and plot
