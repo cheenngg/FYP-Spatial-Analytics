@@ -2,11 +2,14 @@
 clear all;
 close all;
 clc; 
-dim_cal = 200
+dim_cal = 1000
 txt = 'LR1'
 load(sprintf('datasets/%s_input_randomfield_cal%i', txt, dim_cal));
 addpath('functions/');
 her.txt = txt; %dataset identification
+
+% Start timing
+tic;
 
 %% Define infogram and Geo3 properties
 her.lag_dist = 2.0; % DEFINE the class size (lag width in meters if the input x,y is given in meters)
@@ -45,7 +48,7 @@ y_target = y_target_grid(:);
 
 % %Predict validation set (for performance analysis, if your validation set does not match with the grid)
 % % x and y here could be a column vector
-[pmf_pred_nn, target_idx_zero_neigh_pred] = f_her_predict(x_cal, y_cal,z_cal, x, y, her);
+%[pmf_pred_nn, target_idx_zero_neigh_pred] = f_her_predict(x_cal, y_cal,z_cal, x, y, her);
 
 %% Extract PMF statistics
 % extract mean, median, mode, probability and plot
@@ -80,6 +83,15 @@ PMF_simulated_test = pmf_(idx_test);
 perf.DKL_score_mean_test = f_performance_prob(z_test', PMF_simulated_test, PMF_true_test, her.edges_z);
 perf.correl_test = corr(z_test, (z_target_pred_(idx_test) - z_test));
 
+% End timing
+elapsedTime = toc;
+% Print the elapsed time to the Command Window
+fprintf('Total computational time: %.2f seconds.\n', elapsedTime);
+
+% Save the elapsed time to a text file
+fileID = fopen('computation_time.txt', 'a');
+fprintf(fileID, 'datasets/%s_input_randomfield_cal%i : Total computational time: %.2f seconds.\n', txt, dim_cal, elapsedTime);
+fclose(fileID);
 %% clear 
 %Geo3
 %Geo3
