@@ -2,8 +2,8 @@
 clear all;
 close all;
 clc; 
-dim_cal = 1000
-txt = 'LR1'
+dim_cal = 2000
+txt = 'LR0'
 load(sprintf('datasets/%s_input_randomfield_cal%i', txt, dim_cal));
 addpath('functions/');
 her.txt = txt; %dataset identification

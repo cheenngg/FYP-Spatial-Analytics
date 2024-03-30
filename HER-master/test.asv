@@ -1,0 +1,7 @@
+fprintf('Correl Test: %.4f\n', perf.correl_test);
+fprintf('DKL_score_mean_test: %.4f\n', perf.DKL_score_mean_test);
+fprintf('perf.error_sign_test: %.4f\n', perf.error_sign_test);
+fprintf('perf.RMSE_test: %.4f\n', perf.RMSE_test);
+fprintf('perf.ME_test: %.4f\n', perf.ME_test);
+
+perf.error_sign_test, perf.RMSE_test, perf.ME_test, perf.MAE_test, perf.NSE_test
