@@ -2,8 +2,8 @@
 clear all;
 close all;
 clc; 
-dim_cal = 2000
-txt = 'LR0'
+dim_cal = 600
+txt = 'SR0'
 load(sprintf('datasets/%s_input_randomfield_cal%i', txt, dim_cal));
 addpath('functions/');
 her.txt = txt; %dataset identification
@@ -88,9 +88,41 @@ elapsedTime = toc;
 % Print the elapsed time to the Command Window
 fprintf('Total computational time: %.2f seconds.\n', elapsedTime);
 
+fprintf('Correl Test: %.4f\n', perf.correl_test);
+fprintf('DKL_score_mean_test: %.4f\n', perf.DKL_score_mean_test);
+%fprintf('perf.error_sign_test: %.4f\n', perf.error_sign_test);
+fprintf('perf.RMSE_test: %.4f\n', perf.RMSE_test);
+fprintf('perf.ME_test: %.4f\n', perf.ME_test);
+fprintf('perf.MAE_test: %.4f\n', perf.MAE_test);
+fprintf('perf.NSE_test: %.4f\n', perf.NSE_test);
+
+fprintf('Correl Val: %.4f\n', perf.correl_val);
+fprintf('DKL_score_mean_val: %.4f\n', perf.DKL_score_mean_val);
+%fprintf('perf.error_sign_val: %.4f\n', perf.error_sign_val);
+fprintf('perf.RMSE_val: %.4f\n', perf.RMSE_val);
+fprintf('perf.ME_val: %.4f\n', perf.ME_val);
+fprintf('perf.MAE_val: %.4f\n', perf.MAE_val);
+fprintf('perf.NSE_val: %.4f\n', perf.NSE_val);
+
 % Save the elapsed time to a text file
 fileID = fopen('computation_time.txt', 'a');
 fprintf(fileID, 'datasets/%s_input_randomfield_cal%i : Total computational time: %.2f seconds.\n', txt, dim_cal, elapsedTime);
+fclose(fileID);
+
+fileID = fopen('test_results_SR0_600.txt', 'a');
+fprintf(fileID, 'Correl Test: %.4f\n', perf.correl_test);
+fprintf(fileID, 'DKL_score_mean_test: %.4f\n', perf.DKL_score_mean_test);
+fprintf(fileID, 'perf.RMSE_test: %.4f\n', perf.RMSE_test);
+fprintf(fileID, 'perf.ME_test: %.4f\n', perf.ME_test);
+fprintf(fileID, 'perf.MAE_test: %.4f\n', perf.MAE_test);
+fprintf(fileID, 'perf.NSE_test: %.4f\n', perf.NSE_test);
+
+fprintf(fileID, 'Correl Val: %.4f\n', perf.correl_val);
+fprintf(fileID, 'DKL_score_mean_val: %.4f\n', perf.DKL_score_mean_val);
+fprintf(fileID, 'perf.RMSE_val: %.4f\n', perf.RMSE_val);
+fprintf(fileID, 'perf.ME_val: %.4f\n', perf.ME_val);
+fprintf(fileID, 'perf.MAE_val: %.4f\n', perf.MAE_val);
+fprintf(fileID, 'perf.NSE_val: %.4f\n', perf.NSE_val);
 fclose(fileID);
 %% clear 
 %Geo3
