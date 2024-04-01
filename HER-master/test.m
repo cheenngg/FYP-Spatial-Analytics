@@ -1,3 +1,6 @@
+
+set(figure(9), 'Renderer', 'painters'); % Other options include 'opengl' and 'zbuffer'
+drawnow;
 fprintf('Correl Test: %.4f\n', perf.correl_test);
 fprintf('DKL_score_mean_test: %.4f\n', perf.DKL_score_mean_test);
 %fprintf('perf.error_sign_test: %.4f\n', perf.error_sign_test);

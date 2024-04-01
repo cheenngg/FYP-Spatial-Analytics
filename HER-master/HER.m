@@ -2,7 +2,7 @@
 clear all;
 close all;
 clc; 
-dim_cal = 600
+dim_cal = 2000
 txt = 'SR0'
 load(sprintf('datasets/%s_input_randomfield_cal%i', txt, dim_cal));
 addpath('functions/');
@@ -109,7 +109,7 @@ fileID = fopen('computation_time.txt', 'a');
 fprintf(fileID, 'datasets/%s_input_randomfield_cal%i : Total computational time: %.2f seconds.\n', txt, dim_cal, elapsedTime);
 fclose(fileID);
 
-fileID = fopen('test_results_SR0_600.txt', 'a');
+fileID = fopen('test_results_SR0_2000.txt', 'a');
 fprintf(fileID, 'Correl Test: %.4f\n', perf.correl_test);
 fprintf(fileID, 'DKL_score_mean_test: %.4f\n', perf.DKL_score_mean_test);
 fprintf(fileID, 'perf.RMSE_test: %.4f\n', perf.RMSE_test);
