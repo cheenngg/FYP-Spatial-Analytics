@@ -1,0 +1,13 @@
+Total computational time: 1825.13 seconds.
+Correl Test: -0.2316
+DKL_score_mean_test: 1.1391
+perf.RMSE_test: 0.0981
+perf.ME_test: -0.0010
+perf.MAE_test: 0.0699
+perf.NSE_test: 0.9884
+Correl Val: -0.1959
+DKL_score_mean_val: 1.0960
+perf.RMSE_val: 0.1008
+perf.ME_val: 0.0001
+perf.MAE_val: 0.0696
+perf.NSE_val: 0.9875
