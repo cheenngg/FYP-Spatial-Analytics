@@ -1,0 +1,12 @@
+Correl Test: -0.4899
+DKL_score_mean_test: 3.5090
+perf.RMSE_test: 0.5424
+perf.ME_test: -0.0082
+perf.MAE_test: 0.4318
+perf.NSE_test: 0.7250
+Correl Val: -0.5160
+DKL_score_mean_val: 3.5205
+perf.RMSE_val: 0.5473
+perf.ME_val: 0.0235
+perf.MAE_val: 0.4327
+perf.NSE_val: 0.7262

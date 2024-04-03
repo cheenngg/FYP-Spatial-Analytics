@@ -29,3 +29,11 @@ datasets/SR0_input_randomfield_cal400 : Total computational time: 295.08 seconds
 datasets/SR1_input_randomfield_cal200 : Total computational time: 168.73 seconds.
 datasets/SR1_input_randomfield_cal400 : Total computational time: 556.26 seconds.
 datasets/LR1_input_randomfield_cal200 : Total computational time: 178.32 seconds.
+datasets/LR1_input_randomfield_cal400 : Total computational time: 1003.85 seconds.
+datasets/LR0_input_randomfield_cal1500 : Total computational time: 4385.54 seconds.
+datasets/LR0_input_randomfield_cal1000 : Total computational time: 5620.69 seconds.
+datasets/LR1_input_randomfield_cal1000 : Total computational time: 6190.43 seconds.
+datasets/LR1_input_randomfield_cal800 : Total computational time: 3753.05 seconds.
+datasets/LR0_input_randomfield_cal800 : Total computational time: 3470.58 seconds.
+datasets/LR0_input_randomfield_cal200 : Total computational time: 162.07 seconds.
+datasets/LR0_input_randomfield_cal400 : Total computational time: 892.88 seconds.
