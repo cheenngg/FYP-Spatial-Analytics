@@ -37,3 +37,4 @@ datasets/LR1_input_randomfield_cal800 : Total computational time: 3753.05 second
 datasets/LR0_input_randomfield_cal800 : Total computational time: 3470.58 seconds.
 datasets/LR0_input_randomfield_cal200 : Total computational time: 162.07 seconds.
 datasets/LR0_input_randomfield_cal400 : Total computational time: 892.88 seconds.
+datasets/LR1_input_randomfield_cal600 : Total computational time: 1942.66 seconds.
